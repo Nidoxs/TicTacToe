@@ -7,8 +7,24 @@ from config import *
 def __main__():
     game = TicTacToeGame()
 
-    while game.isActive():
+    while game.active:
+        game.rotate_turn()
 
+        win = game.checkForWin()
+        draw = game.areAllCellsOccupied()
+
+        if win or draw:
+            game.active = False
+            print()
+            print("="*30)
+
+            if win:
+                print("GAME OVER - " + game.turn + " HAS WON!")
+            else:
+                print("GAME OVER - DRAW!")
+
+            game.display_board()
+            print("="*30)
 
 
 __main__()

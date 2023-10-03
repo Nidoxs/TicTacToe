@@ -1,10 +1,6 @@
 EMPTY_SLOT_CHAR = "-"
 
-DEFAULT_BOARD = [
-    [EMPTY_SLOT_CHAR] * 3,
-    [EMPTY_SLOT_CHAR] * 3,
-    [EMPTY_SLOT_CHAR] * 3
-]
+DEFAULT_BOARD = [EMPTY_SLOT_CHAR]*9
 
 PLAYERS = [
     "O",
@@ -16,3 +12,5 @@ INPUT_STRING = "{turn}'s turn (1-9):"
 UI = {
     "lineWidth": 5
 }
+
+CONSOLE_MODE = True
